@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.photosort.Activities.FilterActivity">
+
+    <CheckBox
+        android:id="@+id/locationCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:onClick="onCheckbox"
+        android:text="@string/location_checkbox"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/longitudeText" />
+
+    <CheckBox
+        android:id="@+id/dateCheckbox"
+        android:layout_width="72dp"
+        android:layout_height="31dp"
+        android:checked="false"
+        android:onClick="onCheckbox"
+        android:text="@string/date_checkbox"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <SeekBar
+        android:id="@+id/locationFilterBar"
+        android:layout_width="375dp"
+        android:layout_height="14dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:max="201"
+        android:progress="0"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/photoGrid"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/longitudeText"
+        android:layout_width="50dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="125dp"
+        android:labelFor="@+id/longitudeValue"
+        android:text="@string/longitude_text"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/longitudeValue"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/latitudeText"
+        android:layout_width="50dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="125dp"
+        android:labelFor="@+id/latitudeValue"
+        android:text="@string/latitude_text"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/latitudeValue"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/latitudeValue"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="125dp"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:maxLines="1"
+        android:text="@string/default_latitude"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/locationFilterBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:textColorLink="@android:color/black" />
+
+    <EditText
+        android:id="@+id/longitudeValue"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="125dp"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal"
+        android:maxLines="1"
+        android:text="@string/default_longitude"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textColorLink="@android:color/black"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/locationFilterBar"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:textSize="12sp" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="375dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:datePickerMode="spinner"
+        android:headerBackground="@android:color/holo_blue_dark"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:startYear="2000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/dateFilterBar"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateCheckbox"
+        app:layout_constraintVertical_bias="1.0"
+        tools:calendarViewShown="false"
+        tools:endYear="2017"
+        tools:headerBackground="@android:color/background_light"
+        tools:scrollbars="none"
+        tools:spinnersShown="true" />
+
+    <SeekBar
+        android:id="@+id/dateFilterBar"
+        android:layout_width="375dp"
+        android:layout_height="14dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:max="207"
+        android:progress="0"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/locationCheckbox"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <GridView
+        android:id="@+id/photoGrid"
+        android:layout_width="368dp"
+        android:layout_height="138dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:numColumns="3"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="378dp"
+        tools:layout_editor_absoluteX="25dp" />
+
+</android.support.constraint.ConstraintLayout>

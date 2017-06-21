@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PhotoSort</string>
+    <string name="right_button">&gt;&gt;</string>
+    <string name="left_button">&lt;&lt;</string>
+    <string name="add_button">Add</string>
+    <string name="snap_button">Snap</string>
+    <string name="enlarge_button">Enlarge</string>
+    <string name="filter_button">Filter</string>
+    <string name="settings_button">Settings</string>
+    <string name="location_checkbox">Location</string>
+    <string name="date_checkbox">Date</string>
+    <string name="add_label">Add Tag</string>
+    <string name="select_directory_label">Set Default Directory</string>
+    <string name="content_descripton">Displays the current image</string>
+    <string name="back_button">Back</string>
+    <string name="latitude_text">Lat.</string>
+    <string name="longitude_text">Long.</string>
+    <string name="default_latitude">0</string>
+    <string name="default_longitude">0</string>
+
+</resources>
